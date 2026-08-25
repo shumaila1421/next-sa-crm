@@ -9,7 +9,7 @@ export default function Home() {
           Study Abroad Consultancy
         </p>
         <p className="text-gray-400 text-xs">Your journey. Our guidance.</p>
-        <button className="mt-4 bg-blue-900 text-white px-6 py-2 rounded-lg hover:bg-blue-800 transition">
+        <button className="mt-4 bg-blue-900 text-white px-5 py-1.5 rounded-lg hover:bg-blue-800 transition">
           Get Started
         </button>
       </div>
