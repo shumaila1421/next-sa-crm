@@ -1,4 +1,4 @@
-import Sidebar from "@/component/Sidebar";
+import Sidebar from "@/components/Sidebar";
 export default function CRMLayout({ children }: { children: React.ReactNode }) {
   return (
     <div className="min-h-screen flex">

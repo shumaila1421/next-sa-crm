@@ -1,5 +1,4 @@
-import Link from "next/link";
-
+import StatCard from "@/components/StatCard";
 export default function Dashboard() {
   return (
     <main className="min-h-screen bg-zinc-50 flex">
@@ -9,25 +8,10 @@ export default function Dashboard() {
           Overview of your study abroad consultancy.
         </p>
         <div className="mt-8 flex gap-4">
-          <div className="flex-1 rounded-xl border border-gray-100  bg-white p-5 shadow-sm">
-            <p className="text-sm text-gray-500">Students</p>
-            <h2 className="mt-2 text-2xl font-semibold text-gray-800">128</h2>
-          </div>
-
-          <div className="flex-1 rounded-xl border border-gray-100  bg-white p-5 shadow-sm">
-            <p className="text-sm text-gray-500">Applications</p>
-            <h2 className="mt-2 text-2xl font-semibold text-gray-800">42</h2>
-          </div>
-
-          <div className="flex-1 rounded-xl border border-gray-100  bg-white p-5 shadow-sm">
-            <p className="text-sm text-gray-500">Universities</p>
-            <h2 className="mt-2 text-2xl font-semibold text-gray-800">35</h2>
-          </div>
-
-          <div className="flex-1 rounded-xl  border border-gray-100 bg-white p-5 shadow-sm">
-            <p className="text-sm text-gray-500">Documents</p>
-            <h2 className="mt-2 text-2xl font-semibold text-gray-800">186</h2>
-          </div>
+          <StatCard title="Students" value={128} />
+          <StatCard title="Applications" value={42} />
+          <StatCard title="Universities" value={35} />
+          <StatCard title="Documents" value={186} />
         </div>
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-gray-800">
