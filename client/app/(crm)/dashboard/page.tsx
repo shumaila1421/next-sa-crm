@@ -1,5 +1,12 @@
 import StatCard from "@/components/StatCard";
 export default function Dashboard() {
+  const stats = [
+    { title: "Students", value: 128 },
+    { title: "Applications", value: 42 },
+    { title: "Universities", value: 35 },
+    { title: "Documents", value: 186 },
+  ];
+
   return (
     <main className="min-h-screen bg-zinc-50 flex">
       <section className="flex-1 p-8">
@@ -8,10 +15,9 @@ export default function Dashboard() {
           Overview of your study abroad consultancy.
         </p>
         <div className="mt-8 flex gap-4">
-          <StatCard title="Students" value={128} />
-          <StatCard title="Applications" value={42} />
-          <StatCard title="Universities" value={35} />
-          <StatCard title="Documents" value={186} />
+          {stats.map((stat) => (
+            <StatCard key={stat.title} title={stat.title} value={stat.value} />
+          ))}
         </div>
         <div className="mt-8">
           <h2 className="text-lg font-semibold text-gray-800">
