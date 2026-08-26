@@ -7,6 +7,21 @@ export default function Dashboard() {
     { title: "Documents", value: 186 },
   ];
 
+  const applications = [
+    {
+      student: "Ali Khan",
+      university: "University of Toronto",
+      program: "Computer Science",
+      status: "Pending",
+    },
+    {
+      student: "Sara Ahmed",
+      university: "University of Melbourne",
+      program: "Business",
+      status: "Approved",
+    },
+  ];
+
   return (
     <main className="min-h-screen bg-zinc-50 flex">
       <section className="flex-1 p-8">
@@ -47,23 +62,28 @@ export default function Dashboard() {
               </thead>
 
               <tbody>
-                <tr className="border-b border-gray-100">
-                  <td className="px-5 py-4 text-gray-800">Ali Khan</td>
-                  <td className="px-5 py-4 text-gray-600">
-                    University of Toronto
-                  </td>
-                  <td className="px-5 py-4 text-gray-600">Computer Science</td>
-                  <td className="px-5 py-4 text-gray-600">Pending</td>
-                </tr>
+                {applications.map((application) => (
+                  <tr
+                    key={application.student}
+                    className="border-b border-gray-100"
+                  >
+                    <td className="px-5 py-4 text-gray-800">
+                      {application.student}
+                    </td>
 
-                <tr>
-                  <td className="px-5 py-4 text-gray-800">Sara Ahmed</td>
-                  <td className="px-5 py-4 text-gray-600">
-                    University of Melbourne
-                  </td>
-                  <td className="px-5 py-4 text-gray-600">Business</td>
-                  <td className="px-5 py-4 text-gray-600">Approved</td>
-                </tr>
+                    <td className="px-5 py-4 text-gray-600">
+                      {application.university}
+                    </td>
+
+                    <td className="px-5 py-4 text-gray-600">
+                      {application.program}
+                    </td>
+
+                    <td className="px-5 py-4 text-gray-600">
+                      {application.status}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
