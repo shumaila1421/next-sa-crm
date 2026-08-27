@@ -1,5 +1,4 @@
 import type { Application } from "@/types/application";
-import { table } from "console";
 
 type ApplicationTableProps = {
   applications: Application[];
