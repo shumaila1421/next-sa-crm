@@ -1,4 +1,6 @@
 import StatCard from "@/components/StatCard";
+import ApplicationTable from "@/components/ApplicationTable";
+
 export default function Dashboard() {
   const stats = [
     { title: "Students", value: 128 },
@@ -42,50 +44,8 @@ export default function Dashboard() {
           <p className="mt-1 text-sm text-gray-500">
             Latest student application activity.
           </p>
-          <div className="mt-4 overflow-hidden rounded-xl border border-gray-100 bg-white shadow-sm">
-            <table className="w-full text-left text-sm">
-              <thead className="border-b border-gray-100 bg-gray-50">
-                <tr>
-                  <th className="px-5 py-3 font-medium text-gray-500">
-                    Student
-                  </th>
-                  <th className="px-5 py-3 font-medium text-gray-500">
-                    University
-                  </th>
-                  <th className="px-5 py-3 font-medium text-gray-500">
-                    Program
-                  </th>
-                  <th className="px-5 py-3 font-medium text-gray-500">
-                    Status
-                  </th>
-                </tr>
-              </thead>
-
-              <tbody>
-                {applications.map((application) => (
-                  <tr
-                    key={application.student}
-                    className="border-b border-gray-100"
-                  >
-                    <td className="px-5 py-4 text-gray-800">
-                      {application.student}
-                    </td>
-
-                    <td className="px-5 py-4 text-gray-600">
-                      {application.university}
-                    </td>
-
-                    <td className="px-5 py-4 text-gray-600">
-                      {application.program}
-                    </td>
-
-                    <td className="px-5 py-4 text-gray-600">
-                      {application.status}
-                    </td>
-                  </tr>
-                ))}
-              </tbody>
-            </table>
+          <div className="mt-4">
+            <ApplicationTable applications={applications} />
           </div>
         </div>
       </section>
