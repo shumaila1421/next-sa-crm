@@ -36,9 +36,9 @@ export default function ApplicationTable({
               <td className="px-5 py-4">
                 <span
                   className={
-                    application.status === "Approved"
-                      ? "rounded-full bg-green-100 px-3 py-1 text-xs font-medium text=green-700"
-                      : "rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-700"
+                    application.status === "Pending"
+                      ? "rounded-full bg-yellow-100 px-3 py-1 text-xs font-medium text-yellow-700"
+                      : "rounded-full bg-green-100 px-3 py-1 text-xs font-medium text=green-700"
                   }
                 >
                   {application.status}
